@@ -5,8 +5,11 @@ from discord.ext import commands, tasks
 import yt_dlp
 import asyncio
 import os
+from dotenv import load_dotenv
+load_dotenv()
 
-TOKEN = os.getenv("DISCORD_TOKEN")
+TOKEN = os.getenv("TOKEN")
+
 VC_CHANNEL_ID = 1371799741066776728  # ห้องเสียงที่จะเข้าทุกวัน
 intents = discord.Intents.default()
 intents.message_content = True
